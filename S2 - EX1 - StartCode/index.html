@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StudyHub — Learning Resources</title>
+    
+    
+    <!-- Exercise 1: Add Tailwind CDN -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    
+    <!-- Exercise 2: All <style> block deleted -->
+    
+</head>
+
+
+<!-- Exercise 3: Convert body layout to Tailwind -->
+
+<body class="min-h-screen bg-slate-50 text-slate-900 leading-normal p-3 sm:p-6 flex justify-center items-start font-sans">
+    
+    
+    <!-- Exercise 3: Convert container to Tailwind -->
+    
+    <div class="w-full max-w-[1100px]" role="main">
+        
+        
+        <!-- Exercise 3 & 5: Convert header with responsive -->
+        
+        <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 mb-6">
+            <div class="flex items-center gap-3">
+                <!-- Exercise 3: Convert logo -->
+                <div class="w-12 h-12 rounded-[10px] bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-lg">
+                    SH
+                </div>
+                <div>
+                    <!-- Exercise 4: Replace inline styles -->
+                    <div class="font-extrabold">StudyHub</div>
+                    <div class="text-[13px] text-slate-500">Learn together • Build faster</div>
+                </div>
+            </div>
+
+            <!-- Exercise 5: Responsive navigation -->
+            <nav aria-label="Primary" class="flex gap-4 items-center order-2 sm:order-none">
+                <a href="#courses" class="text-slate-500 no-underline font-semibold px-3 py-2 rounded-lg">Courses</a>
+                <a href="#resources" class="text-slate-500 no-underline font-semibold px-3 py-2 rounded-lg">Resources</a>
+                <a href="#community" class="text-slate-500 no-underline font-semibold px-3 py-2 rounded-lg">Community</a>
+                <a href="#signup" class="bg-blue-600 text-white no-underline font-semibold px-3 py-2 rounded-lg">Get Started</a>
+            </nav>
+        </header>
+
+        
+        <!-- Exercise 3 & 5: Hero grid with responsive columns -->
+        
+        <section class="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-6 items-center mb-7" aria-labelledby="hero-heading">
+            <div class="bg-gradient-to-b from-white/60 to-white/90 p-7 rounded-xl shadow-lg">
+                <!-- Responsive font size -->
+                <h1 id="hero-heading" class="text-[22px] sm:text-[28px] mb-3 font-bold">Your weekly learning playground</h1>
+                <p class="text-slate-500 mb-4">Curated bite-sized courses, hands-on projects, and community challenges to keep you
+                    learning consistently.</p>
+                <div class="flex gap-3 mb-4">
+                    <button class="border-0 px-4 py-3 rounded-[10px] cursor-pointer font-bold bg-blue-600 text-white">Explore Courses</button>
+                    <button class="border-2 border-[#e6eef9] px-4 py-3 rounded-[10px] cursor-pointer font-bold bg-transparent text-blue-600">Join Community</button>
+                </div>
+
+                <!-- Replace inline styles -->
+                <hr class="my-4 border-0 border-t border-[#eef2ff]">
+
+                <!--  Replace inline styles -->
+                <div class="flex gap-3 flex-wrap">
+                    <div class="min-w-[160px]">
+                        <div class="text-[13px] text-slate-500">Next live workshop</div>
+                        <div class="font-bold">Stateful APIs • Dec 15</div>
+                    </div>
+                    <div class="min-w-[160px]">
+                        <div class="text-[13px] text-slate-500">Active learners</div>
+                        <div class="font-bold">3,412</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signup card -->
+            <aside class="bg-gradient-to-b from-white/60 to-white/90 p-7 rounded-xl shadow-lg" aria-labelledby="signup-title">
+                <!-- Exercise 4: Replace inline styles -->
+                <h2 id="signup-title" class="text-lg mb-2 font-bold">Start your free plan</h2>
+                <p class="text-slate-500 mb-3">No credit card — upgrade anytime.</p>
+                <!-- Exercise 4: Replace inline styles -->
+                <form id="signup" class="flex flex-col gap-2">
+                    <!-- Exercise 4: Replace inline styles for inputs -->
+                    <input type="text" placeholder="Full name" class="p-2 rounded-lg border border-[#e6eef9]" />
+                    <input type="email" placeholder="Email address" class="p-2 rounded-lg border border-[#e6eef9]" />
+                    <button type="submit" class="border-0 px-4 py-3 rounded-[10px] cursor-pointer font-bold bg-blue-600 text-white">Create account</button>
+                </form>
+            </aside>
+        </section>
+
+        
+        <!-- Exercise 3 & 5: Features grid responsive -->
+        
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-7" aria-label="features">
+            <!-- Exercise 3: Convert feature cards -->
+            <div class="bg-white p-4 rounded-xl shadow-md flex gap-3 items-start">
+                <!-- Exercise 4: Replace inline styles -->
+                <div class="w-[46px] h-[46px] rounded-[10px] bg-[#eef2ff] flex items-center justify-center font-bold shrink-0">
+                    PG
+                </div>
+                <div>
+                    <h3 class="mb-1 text-base font-bold">Project Guided</h3>
+                    <p class="text-slate-500 text-sm">Short projects with guided steps and solution walkthroughs.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex gap-3 items-start">
+                <div class="w-[46px] h-[46px] rounded-[10px] bg-[#fff7ed] flex items-center justify-center font-bold shrink-0">
+                    LR
+                </div>
+                <div>
+                    <h3 class="mb-1 text-base font-bold">Learning Roadmaps</h3>
+                    <p class="text-slate-500 text-sm">Structured paths from beginner to job-ready levels.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex gap-3 items-start">
+                <div class="w-[46px] h-[46px] rounded-[10px] bg-[#ecfccb] flex items-center justify-center font-bold shrink-0">
+                    CM
+                </div>
+                <div>
+                    <h3 class="mb-1 text-base font-bold">Community Mentors</h3>
+                    <p class="text-slate-500 text-sm">Mentor hours and peer feedback to accelerate growth.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Resources grid responsive -->
+        
+        <section id="resources" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-7" aria-label="resources">
+            <article class="bg-white p-3 rounded-[10px] flex flex-col gap-2">
+                <!-- Responsive image heights -->
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd"
+                    alt="notebook and coffee" class="w-full h-[90px] sm:h-[110px] object-cover rounded-lg">
+                <h4 class="text-[15px] font-bold">How to build a daily coding habit</h4>
+                <p class="text-[13px] text-slate-500">10 min read • Beginner</p>
+            </article>
+
+            <article class="bg-white p-3 rounded-[10px] flex flex-col gap-2">
+                <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=efgh"
+                    alt="laptop" class="w-full h-[90px] sm:h-[110px] object-cover rounded-lg">
+                <h4 class="text-[15px] font-bold">Deploy your first Node.js app</h4>
+                <p class="text-[13px] text-slate-500">30 min guide • Intermediate</p>
+            </article>
+
+            
+
+            <article class="bg-white p-3 rounded-[10px] flex flex-col gap-2">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=mnop"
+                    alt="team" class="w-full h-[90px] sm:h-[110px] object-cover rounded-lg">
+                <h4 class="text-[15px] font-bold">How to work in open source</h4>
+                <p class="text-[13px] text-slate-500">25 min • All levels</p>
+            </article>
+        </section>
+
+        
+        <!-- Exercise 3 & 5: Two-column layout responsive -->
+        
+        <section class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-5 mb-7" aria-label="dashboard">
+            <div>
+                <div class="bg-gradient-to-b from-white/60 to-white/90 p-7 rounded-xl shadow-lg mb-3">
+                    <h3 class="mb-2 font-bold">Your active courses</h3>
+                    <!-- Replace inline styles -->
+                    <div class="flex flex-col gap-3">
+                        <!-- Progress bars -->
+                        <div class="flex justify-between items-center gap-3">
+                            <div>
+                                <div class="font-bold">Fullstack Basics</div>
+                                <div class="text-[13px] text-slate-500">Module 3 of 8</div>
+                            </div>
+                            <div class="min-w-[120px]">
+                                <div class="text-[13px] text-slate-500">Progress</div>
+                                <div class="h-2 bg-[#eef2ff] rounded-lg mt-1 overflow-hidden">
+                                    <div class="w-[78%] h-full bg-gradient-to-r from-purple-600 to-cyan-500"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center gap-3">
+                            <div>
+                                <div class="font-bold">Intro to Databases</div>
+                                <div class="text-[13px] text-slate-500">Module 1 of 5</div>
+                            </div>
+                            <div class="min-w-[120px]">
+                                <div class="text-[13px] text-slate-500">Progress</div>
+                                <div class="h-2 bg-[#eef2ff] rounded-lg mt-1 overflow-hidden">
+                                    <div class="w-[36%] h-full bg-gradient-to-r from-emerald-400 to-cyan-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-white/60 to-white/90 p-7 rounded-xl shadow-lg">
+                    <h3 class="mb-2 font-bold">Community Challenges</h3>
+                    <!-- Exercise 4: Replace inline styles -->
+                    <ul class="list-none grid gap-2">
+                        <li class="bg-white p-2 rounded-lg flex justify-between items-center">
+                            <div>
+                                <div class="font-bold">30-day JS challenge</div>
+                                <div class="text-[13px] text-slate-500">Day 12 • 120 people active</div>
+                            </div>
+                            <button class="border-2 border-[#e6eef9] px-4 py-3 rounded-[10px] cursor-pointer font-bold bg-transparent text-blue-600">Join</button>
+                        </li>
+                        <li class="bg-white p-2 rounded-lg flex justify-between items-center">
+                            <div>
+                                <div class="font-bold">Weekly Algo Sprint</div>
+                                <div class="text-[13px] text-slate-500">Sat • 10:00 AM</div>
+                            </div>
+                            <button class="border-2 border-[#e6eef9] px-4 py-3 rounded-[10px] cursor-pointer font-bold bg-transparent text-blue-600">RSVP</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="bg-white p-4 rounded-xl h-full flex flex-col gap-3" aria-labelledby="progress-title">
+                <h4 id="progress-title" class="mb-1 font-bold">Learning streak</h4>
+                <div class="flex justify-between items-center gap-3">
+                    <div>
+                        <div class="text-[13px] text-slate-500">This week</div>
+                        <div class="font-bold">4 days</div>
+                    </div>
+                    <div class="flex-1 h-2 bg-[#eef2ff] rounded-lg overflow-hidden" aria-hidden="true">
+                        <!-- Exercise 4: Replace inline width -->
+                        <span class="block h-full w-[64%] bg-gradient-to-r from-purple-600 to-cyan-500"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="mb-1 font-bold">Recommended topic</h4>
+                    <div class="font-bold">APIs with Express</div>
+                    <p class="text-[13px] text-slate-500 mt-2">A short path to build and deploy a REST API in under an
+                        hour.</p>
+                </div>
+
+                <!-- Exercise 4: Replace inline margin-top:auto -->
+                <div class="mt-auto">
+                    <h4 class="mb-2 font-bold">Account</h4>
+                    <div class="text-[13px] text-slate-500">Email: student@example.com</div>
+                    <button class="mt-2 border-2 border-[#e6eef9] px-4 py-3 rounded-[10px] cursor-pointer font-bold bg-transparent text-blue-600">Manage plan</button>
+                </div>
+            </aside>
+        </section>
+
+        
+        <!-- Exercise 3 & 5: Footer with responsive grid -->
+        
+        <footer class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+            <div>
+                <div class="font-extrabold">StudyHub</div>
+                <div class="text-[13px] text-slate-500">Learn together • Build faster</div>
+            </div>
+            <!-- Exercise 4: Replace inline styles -->
+            <div class="flex gap-3 flex-wrap lg:justify-end">
+                <a class="text-[13px] text-slate-500" href="#">Terms</a>
+                <a class="text-[13px] text-slate-500" href="#">Privacy</a>
+                <a class="text-[13px] text-slate-500" href="#">Support</a>
+            </div>
+        </footer>
+    </div>
+
+    
+    <!-- Content and structure unchanged  -->
+    
+</body>
+
+</html>
